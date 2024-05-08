@@ -1,4 +1,4 @@
-import { spawn } from "child_process";
+import { spawn } from "node:child_process";
 
 const split_path = (pythonModulePath) => {
   // Find the last occurrence of '/' which separates the directory from the file
