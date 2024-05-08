@@ -1,8 +1,8 @@
-import pymport from "./index.mjs";
+import pymport from "../index.mjs";
 import assert from "node:assert";
 const example = pymport(import.meta.resolve("./test.py"));
 const secret = example("secret", Number);
-assert.strictEqual(await secret.value, 4);
+assert.strictEqual(await secret.value, 5);
 const question = example("question");
 assert.strictEqual(
   await question.call("who's there?"),

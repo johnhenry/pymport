@@ -1,6 +1,10 @@
 {
-  "name": "python-module",
-  "version": "1.0.0",
+  "name": "pymport",
+  "version": "0.0.0",
   "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "node ./test.mjs"
+  },
   "dependencies": {}
 }
