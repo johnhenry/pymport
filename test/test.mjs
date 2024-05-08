@@ -1,6 +1,6 @@
-import pymport from "../index.mjs";
+import pyntegrate from "../index.mjs";
 import assert from "node:assert";
-const example = pymport(import.meta.resolve("./test.py"));
+const example = pyntegrate(import.meta.resolve("./test.py"));
 const secret = example("secret", Number);
 assert.strictEqual(await secret.value, 5);
 const question = example("question");

@@ -1,11 +1,13 @@
-# pymport
+# pyntegrate
 
 Import python modules into javascript files.
+
+See [pymport](https://www.npmjs.com/package/pymport) for a similar package that allows for importing python modules into javascript files.
 
 ## Installation
 
 ```bash
-npm install pymport
+npm install pyntegrate
 ```
 
 ## Usage: Compare to normal javascript imports
@@ -17,8 +19,8 @@ const js_func_val = javascript_module.some_func();
 ```
 
 ```javascript
-import pymport from "pymport";
-const python_module = pymport(
+import pyntegrate from "pyntegrate";
+const python_module = pyntegrate(
   import.meta.resolve("./path/to/python_module.py")
 );
 const ps_val = await python_module("some_val").value;
@@ -28,8 +30,8 @@ const ps_func_val = await python_module("some_func").call();
 ## Usage: Casting
 
 ```javascript
-import pymport from "pymport";
-const python_module = pymport(
+import pyntegrate from "pyntegrate";
+const python_module = pyntegrate(
   import.meta.resolve("./path/to/python_module.py")
 );
 const ps_some_numeric_val = await python_module("some_numeric_val", Number)

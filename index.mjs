@@ -31,7 +31,7 @@ const invoke = (command, transform = (x) => x) =>
     });
   });
 
-const pymport = (pythonModulePath) => {
+const pyntegrate = (pythonModulePath) => {
   const [path, module] = split_path(pythonModulePath);
   return (exportName, transform) => {
     const preamble = `import importlib.util; import sys; spec = importlib.util.spec_from_file_location("module.name","${path}/${module}"); foo = importlib.util.module_from_spec(spec); sys.modules["module.name"] = foo; spec.loader.exec_module(foo);__ = foo.${exportName};`;
@@ -52,4 +52,4 @@ const pymport = (pythonModulePath) => {
   };
 };
 
-export default pymport;
+export default pyntegrate;
